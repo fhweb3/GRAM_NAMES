@@ -1,11 +1,9 @@
-// Public Firebase Web App config. Safe to publish; never put service-account keys here.
-// Replace placeholders with values from Firebase Console → Project settings → Your apps.
+
 export const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.firebasestorage.app",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyAGPuIDYOYjhe8-AXOomLn7E5_-e9KyRtQ",
+  authDomain: "gram-names-c682b.firebaseapp.com",
+  projectId: "gram-names-c682b",
+  storageBucket: "gram-names-c682b.firebasestorage.app",
+  messagingSenderId: "504472454139",
+  appId: "1:123456789:web:replace-with-your-app-id"
 };
-export const FUNCTIONS_REGION = "us-central1";
