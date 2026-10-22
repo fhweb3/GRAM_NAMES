@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#229ED9">
+  <title>GRAM NAMES SHOP — Telegram Username Inventory</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./index.html"><span class="logo">✈</span><span>GRAM NAMES SHOP<small>Telegram username inventory</small></span></a>
+    <a class="button button-light" href="./admin.html">Admin login</a>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow">💐 🌹 🎉 YOUR TELEGRAM NAME MARKET</div>
+      <h1>Find your next <span>Telegram username.</span></h1>
+      <p>Browse the inventory and contact the shop to ask about a username.</p>
+      <div class="search-row">
+        <input id="search" type="search" placeholder="Search usernames or categories…" aria-label="Search inventory">
+        <select id="statusFilter" aria-label="Filter by status">
+          <option value="">All statuses</option><option value="available">Available</option><option value="current offer">Current Offer</option><option value="sold">Sold</option>
+        </select>
+      </div>
+      <div id="categoryFilters" class="chips"></div>
+    </section>
+    <section class="inventory-head"><div><h2>Username inventory</h2><p id="count" class="muted">Loading inventory…</p></div><span class="currency">Prices in USD ($)</span></section>
+    <div id="message" class="notice" hidden></div>
+    <section id="inventory" class="cards" aria-live="polite"></section>
+    <nav id="pagination" class="pagination" aria-label="Inventory pages"></nav>
+    <p class="footer-note">Availability can change. Contact the seller to confirm before making a purchase.</p>
+  </main>
+  <footer><span>© GRAM NAMES SHOP</span><span>Telegram-inspired · Built for username browsing</span></footer>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
