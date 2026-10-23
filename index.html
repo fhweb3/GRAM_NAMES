@@ -25,7 +25,30 @@
       </div>
       <div id="categoryFilters" class="chips"></div>
     </section>
-    <section class="inventory-head"><div><h2>Username inventory</h2><p id="count" class="muted">Loading inventory…</p></div><span class="currency">Prices in USD ($)</span></section>
+    
+<section class="stats-grid" aria-label="Inventory statistics">
+  <div class="stat-card">
+    <span>Available</span>
+    <strong id="availableCount">0</strong>
+  </div>
+  <div class="stat-card">
+    <span>Current Offer</span>
+    <strong id="offerCount">0</strong>
+  </div>
+  <div class="stat-card">
+    <span>Sold</span>
+    <strong id="soldCount">0</strong>
+  </div>
+</section>
+
+<section class="inventory-head">
+  <div>
+    <h2>Username inventory</h2>
+    <p id="count" class="muted">Loading inventory…</p>
+  </div>
+  <span class="currency">Prices in USD ($)</span>
+</section>
+
     <div id="message" class="notice" hidden></div>
     <section id="inventory" class="cards" aria-live="polite"></section>
     <nav id="pagination" class="pagination" aria-label="Inventory pages"></nav>
