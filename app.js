@@ -17,6 +17,9 @@ const searchEl = document.querySelector("#search");
 const statusEl = document.querySelector("#statusFilter");
 const categoryEl = document.querySelector("#categoryFilters");
 const countEl = document.querySelector("#count");
+const availableCountEl = document.querySelector("#availableCount");
+const offerCountEl = document.querySelector("#offerCount");
+const soldCountEl = document.querySelector("#soldCount");
 const paginationEl = document.querySelector("#pagination");
 
 let items = [];
@@ -59,8 +62,14 @@ function badgeClass(status) {
 
 function render() {
   const needle = searchEl.value.trim().toLowerCase();
+availableCountEl.textContent =
+  items.filter(item => item.status === "available").length;
 
-  const filtered = items.filter(item => {
+offerCountEl.textContent =
+  items.filter(item => item.status === "current offer").length;
+
+soldCountEl.textContent =
+  items.filter(item => item.status === "sold").length;  const filtered = items.filter(item => {
     const username = String(item.username || "");
     const itemCategory = String(item.category || "");
 
