@@ -123,3 +123,19 @@
     font-size: 9px;
   }
 }
+button.stat-card {
+  width: 100%;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  appearance: none;
+}
+
+button.stat-card:hover,
+button.stat-card:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(34, 158, 217, 0.18);
+  outline: 2px solid #229ed9;
+  outline-offset: 2px;
+}
