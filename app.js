@@ -61,6 +61,6 @@ onSnapshot(query(collection(db, "inventory"), where("archived", "==", false)), s
 }, err => {
   console.error(err);
   messageEl.hidden = false;
-  messageEl.textContent = "Inventory could not load. Please check Firebase configuration and Firestore rules.";
+  messageEl.textContent = "Firestore error: " + (err.code || err.message || "unknown");
   document.querySelector("#count").textContent = "Inventory unavailable";
 });
