@@ -217,7 +217,19 @@ statusEl.addEventListener("change", () => {
   currentPage = 1;
   render();
 });
+document.querySelector(".stats-grid").addEventListener("click", event => {
+  const card = event.target.closest("[data-status]");
+  if (!card) return;
 
+  statusEl.value = card.dataset.status;
+  currentPage = 1;
+  render();
+
+  document.querySelector("#inventory").scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+});
 paginationEl.addEventListener("click", event => {
   const button = event.target.closest("[data-page]");
 
