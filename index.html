@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,75 +10,80 @@
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="./index.html"><span class="logo">✈</span><span>GRAM NAMES SHOP<small>Telegram username inventory</small></span></a>
+    <a class="brand" href="./index.html">
+      <span class="logo">✈</span>
+      <span>GRAM NAMES SHOP<small>Telegram username inventory</small></span>
+    </a>
     <a class="button button-light" href="./admin.html">Admin login</a>
   </header>
+
   <main class="container">
     <section class="hero">
       <div class="eyebrow">💐 🌹 🎉 YOUR TELEGRAM NAME MARKET</div>
       <h1>Find your next <span>Telegram username.</span></h1>
       <p>Browse the inventory and contact the shop to ask about a username.</p>
+
       <div class="search-row">
-        <input id="search" type="search" placeholder="Search usernames or categories…" aria-label="Search inventory">
+        <input id="search" type="search"
+          placeholder="Search usernames or categories…"
+          aria-label="Search inventory">
+
         <select id="statusFilter" aria-label="Filter by status">
-          <option value="">All statuses</option><option value="available">Available</option><option value="current offer">Current Offer</option><option value="sold">Sold</option>
+          <option value="">All statuses</option>
+          <option value="available">Available</option>
+          <option value="current offer">Current Offer</option>
+          <option value="sold">Sold</option>
         </select>
       </div>
+
       <div id="categoryFilters" class="chips"></div>
     </section>
-    
 
-<section class="stats-grid" aria-label="Inventory statistics">
-  <div class="stat-card available-card">
-    <span class="stat-icon">✈</span>
-    <span class="stat-label">Available</span>
-    <strong id="availableCount">0</strong>
-    <small>Ready to purchase</small>
-  </div>
+    <section class="stats-grid" aria-label="Inventory statistics">
+      <button type="button" class="stat-card available-card" data-status="available">
+        <span class="stat-icon">✈</span>
+        <span class="stat-label">Available</span>
+        <strong id="availableCount">0</strong>
+        <small>Ready to purchase</small>
+      </button>
 
-  <div class="stat-card offer-card">
-    <span class="stat-icon">🔥</span>
-    <span class="stat-label">Current Offer</span>
-    <strong id="offerCount">0</strong>
-    <small>Special offers</small>
-  </div>
+      <button type="button" class="stat-card offer-card" data-status="current offer">
+        <span class="stat-icon">🔥</span>
+        <span class="stat-label">Current Offer</span>
+        <strong id="offerCount">0</strong>
+        <small>Special offers</small>
+      </button>
 
-  <div class="stat-card sold-card">
-    <span class="stat-icon">✓</span>
-    <span class="stat-label">Sold</span>
-    <strong id="soldCount">0</strong>
-    <small>Already sold</small>
-  </div>
-</section>
+      <button type="button" class="stat-card sold-card" data-status="sold">
+        <span class="stat-icon">✓</span>
+        <span class="stat-label">Sold</span>
+        <strong id="soldCount">0</strong>
+        <small>Already sold</small>
+      </button>
+    </section>
 
-  <div class="stat-card">
-    <span>Available</span>
-    <strong id="availableCount">0</strong>
-  </div>
-  <div class="stat-card">
-    <span>Current Offer</span>
-    <strong id="offerCount">0</strong>
-  </div>
-  <div class="stat-card">
-    <span>Sold</span>
-    <strong id="soldCount">0</strong>
-  </div>
-</section>
-
-<section class="inventory-head">
-  <div>
-    <h2>Username inventory</h2>
-    <p id="count" class="muted">Loading inventory…</p>
-  </div>
-  <span class="currency">Prices in USD ($)</span>
-</section>
+    <section class="inventory-head">
+      <div>
+        <h2>Username inventory</h2>
+        <p id="count" class="muted">Loading inventory…</p>
+      </div>
+      <span class="currency">Prices in USD ($)</span>
+    </section>
 
     <div id="message" class="notice" hidden></div>
     <section id="inventory" class="cards" aria-live="polite"></section>
     <nav id="pagination" class="pagination" aria-label="Inventory pages"></nav>
-    <p class="footer-note">Availability can change. Contact the seller to confirm before making a purchase.</p>
+
+    <p class="footer-note">
+      Availability can change. Contact the seller to confirm before making a purchase.
+    </p>
   </main>
-  <footer><span>© GRAM NAMES SHOP</span><span>Telegram-inspired · Built for username browsing</span></footer>
+
+  <footer>
+    <span>© GRAM NAMES SHOP</span>
+    <span>Telegram-inspired · Built for username browsing</span>
+  </footer>
+
   <script type="module" src="./app.js"></script>
 </body>
 </html>
