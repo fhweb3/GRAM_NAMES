@@ -154,7 +154,7 @@ function render() {
 
               <a
                 class="button button-small ${buttonClass}"
-                href="https://t.me/${encodeURIComponent(telegramName)}"
+                href="https://t.me/fhvip3"
                 target="_blank"
                 rel="noopener noreferrer"
               >${contactLabel}</a>
